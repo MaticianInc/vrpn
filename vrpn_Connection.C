@@ -5467,7 +5467,7 @@ vrpn_Connection *vrpn_get_connection_by_name(
             }
         }
 
-        if (c) {                          // creation succeeded
+        if (c->connected()) {                          // creation succeeded
             c->setAutoDeleteStatus(true); // destroy when refcount hits zero.
         } else { // creation failed
             fprintf(stderr, "vrpn_get_connection_by_name(): Could not create new connection.");
