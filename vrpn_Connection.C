@@ -30,7 +30,8 @@
 static size_t MAX_SIZE_T = (size_t)(-1);
 
 // where to log
-#define ERR_FILE stderr
+// FILE *ERR_FILE = stderr; // Could also use any other file
+FILE *ERR_FILE = fopen("/tmp/vrpn.log", "w");
 
 #ifdef VRPN_USE_WINSOCK_SOCKETS
 
